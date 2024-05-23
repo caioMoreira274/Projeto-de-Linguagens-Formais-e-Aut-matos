@@ -1,0 +1,9 @@
+Quem é o motorista?
+Qual a rota?
+Quanto tempo até o destino?
+Qual o valor da corrida?
+Qual é o carro?
+Qual a placa do carro?
+Quais as formas de pagamento?
+Quero uma corrida.
+Onde encontrar o motorista?
