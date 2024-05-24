@@ -4,6 +4,8 @@ Quanto tempo até o destino?
 Qual o valor da corrida?
 Qual é o carro?
 Qual a placa do carro?
+Qual é a cor do carro?
+Qual é o modelo do carro?
 Quais as formas de pagamento?
 Quero uma corrida.
 Onde encontrar o motorista?

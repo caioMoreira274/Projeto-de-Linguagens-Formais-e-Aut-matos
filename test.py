@@ -9,7 +9,7 @@ gramatica = CFG.fromstring("""
     VP -> Verb | Verb NP | Verb Prep Subs | Verb NP Prep NP | Verb Prep NP | Verb Verb | Verb Det Subs Prep Subs
     Prep -> "de" | "o" | "a"
     Det -> "o" | "a" | "um"
-    Subs -> "motorista" | "rota" | "valor" | "corrida" | "carro" | "placa" | "forma" | "pagamento" | "destino"
+    Subs -> "motorista" | "rota" | "valor" | "corrida" | "carro" | "placa" | "forma" | "pagamento" | "destino" | "cor"
     Verb -> "ser" | "querer" | "chegar" | "encontrar"
 """)
 
@@ -20,14 +20,13 @@ parser = nltk.ChartParser(gramatica)
 frases = [
     "quem ser o motorista",
     "qual ser a rota",
-    "onde ser o destino",
-    "qual o valor de o corrida",
     "qual ser o carro",
-    "qual a placa de o carro",
-    "qual o forma de pagamento",
-    "querer um corrida",
+    "onde ser o destino",
     "onde encontrar o motorista",
-    "onde destino ser o"
+    "qual o valor de o corrida",
+    "qual o forma de pagamento",
+    "qual a placa de o carro",
+    "querer um corrida"    
 ]
 
 # Função para analisar as frases
@@ -39,7 +38,6 @@ def analisar_frases(frases, parser):
             parsed = False
             for arvore in parser.parse(sentenca):
                 print('Frase aceita')
-                print(arvore)
                 arvore.pretty_print()
                 parsed = True
             if not parsed:

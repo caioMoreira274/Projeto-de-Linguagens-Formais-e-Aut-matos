@@ -1,7 +1,7 @@
 import spacy
 import string
 
-texto = "Quais as formas de pagamento?"
+texto = "Qual é o modelo do carro?"
 
 
 # Carregar o modelo do spaCy para o português
@@ -15,13 +15,22 @@ def lematizacao(texto):
     lista_de_palavras = texto.split()
     # Lista de palavras para lematização (retirar seu sentido puro)
     lista_de_palavras_lematizadas = []
+    lista_final = []
     # Lematizar as lista_de_palavrasas
     for palavra in lista_de_palavras:
         doc = nlp(palavra)
-        for token in doc:
+        for token in doc:        
             lista_de_palavras_lematizadas.append(token.lemma_)
-    # retorne a lista de palavras lematizadas
-    return lista_de_palavras_lematizadas
+
+    lista_de_frase_lematizadas = " ".join(lista_de_palavras_lematizadas)
+    
+    lista_de_frase_lematizadas = str(lista_de_frase_lematizadas).split()
+    for palavra in lista_de_frase_lematizadas:
+        doc = nlp(palavra)
+        for token in doc:
+            lista_final.append(token.lemma_)
+
+    return lista_final
 
 
 
