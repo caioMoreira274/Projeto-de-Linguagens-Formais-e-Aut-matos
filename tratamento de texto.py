@@ -1,8 +1,8 @@
 import spacy
 import string
 
-texto = "Qual é o modelo do carro?"
-
+#texto = "Quem é o motorista? Qual a rota Quanto tempo até o destino Qual o valor da corrida Qual é o carro Qual a placa do carro Qual é o modelo do carro Quais as formas de pagamento Quero uma corrida Onde encontrar o motorista"
+texto = "Quais as formas de pagamento"
 
 # Carregar o modelo do spaCy para o português
 nlp = spacy.load("pt_core_news_sm")
@@ -34,9 +34,7 @@ def lematizacao(texto):
 
 
 
-def excluir_palavras_repetidas_de_uma_lista():
-    lista_para_analise = separar_texto_em_lista_de_palavras(texto)
-    lista_para_analise = lematizacao(lista_para_analise)
+def excluir_palavras_repetidas_de_uma_lista(lista_para_analise):
     lista_nova = []
     for palavra in lista_para_analise:
         if palavra not in lista_nova:
@@ -50,6 +48,7 @@ def excluir_palavras_repetidas_de_uma_lista():
 
 
 
+#print(excluir_palavras_repetidas_de_uma_lista(lista_para_analise = ['quem', 'ser', 'o', 'motorista', 'qual', 'a', 'rota', 'quanto', 'tempo', 'até', 'o', 'destino', 'qual', 'o', 'valor', 'de', 'o', 'corrida', 'qual', 'ser', 'o', 'carro', 'qual', 'a', 'placar', 'de', 'o', 'carro', 'qual', 'ser', 'a', 'cor', 'de', 'o', 'carro', 'qual', 'ser', 'o', 'modelo', 'de', 'o', 'carro', 'qual', 'o', 'forma', 'de', 'pagamento', 'querer', 'um', 'corrida', 'onde', 'encontrar', 'o', 'motorista']))
 print(lematizacao(texto))
 
 

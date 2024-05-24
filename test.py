@@ -4,12 +4,12 @@ from nltk import CFG
 # Definindo a gramática
 gramatica = CFG.fromstring("""
     S -> Pron VP | Pron NP | NP VP | VP NP | 
-    Pron -> "quem" | "qual" | "quanto" | "onde"
+    Pron -> "quem" | "qual" | "onde"
     NP -> Det Subs | Det Subs Prep NP | Det Subs Prep Subs | Prep Det Subs
     VP -> Verb | Verb NP | Verb Prep Subs | Verb NP Prep NP | Verb Prep NP | Verb Verb | Verb Det Subs Prep Subs
     Prep -> "de" | "o" | "a"
     Det -> "o" | "a" | "um"
-    Subs -> "motorista" | "rota" | "valor" | "corrida" | "carro" | "placa" | "forma" | "pagamento" | "destino" | "cor"
+    Subs -> "motorista" | "rota" | "valor" | "corrida" | "carro" | "placar" | "forma" | "pagamento" | "destino" 
     Verb -> "ser" | "querer" | "chegar" | "encontrar"
 """)
 
@@ -25,7 +25,7 @@ frases = [
     "onde encontrar o motorista",
     "qual o valor de o corrida",
     "qual o forma de pagamento",
-    "qual a placa de o carro",
+    "qual a placar de o carro",
     "querer um corrida"    
 ]
 
