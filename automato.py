@@ -2,7 +2,7 @@ class Automato:
     def __init__(self):
         self.estados = ['S', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10', 'Q11', 'Q12',
                 'Q13', 'Q14', 'Q15', 'Q16', 'Q17', 'Q18', 'Q19', 'Q20', 'Q21','Q22', 'Q23', 'Q24',
-                'Q25', 'Q27', 'Q28', 'Q29', 'Q30', 'Q31', 'Q32', 'Q33', 'Q34', 'Q35', 'Q36', 'Q37']
+                'Q25', 'Q27', 'Q28', 'Q29', 'Q30', 'Q31', 'Q32', 'Q33', 'Q34', 'Q35', 'Q36']
         
         self.alfabeto = ['quem', 'qual', 'onde', 'de', 'o', 'a', 'um', 'ser', 'querer', 'chegar', 'encontrar',
                 'motorista', 'rota', 'valor', 'corrida','carro', 'placar', 'forma', 'pagamento',
@@ -10,7 +10,7 @@ class Automato:
         
         self.estado_inicial = "S"
         
-        self.estados_finais = ['Q3', 'Q7', 'Q9', 'Q13', 'Q14', 'Q16', 'Q17', 'Q21', 'Q25', 'Q31', 'Q35', 'Q37']
+        self.estados_finais = ['Q3', 'Q7', 'Q9', 'Q13', 'Q14', 'Q16', 'Q17', 'Q21', 'Q25', 'Q31', 'Q35']
         
         self.estado_atual = self.estado_inicial
         
@@ -726,7 +726,7 @@ class Automato:
                                 ('Q36', 'querer'): '.',
                                 ('Q36', 'chegar'): '.',
                                 ('Q36', 'encontrar'): '.',
-                                ('Q36', 'motorista'): 'Q37',
+                                ('Q36', 'motorista'): 'Q35',
                                 ('Q36', 'rota'): '.',
                                 ('Q36', 'valor'): '.',
                                 ('Q36', 'corrida'): '.',
@@ -735,26 +735,6 @@ class Automato:
                                 ('Q36', 'forma'): '.',
                                 ('Q36', 'pagamento'): '.',
                                 ('Q36', 'destino'): '.',
-                                ('Q37', 'quem'): 'Q37',
-                                ('Q37', 'qual'): 'Q37',
-                                ('Q37', 'onde'): 'Q37',
-                                ('Q37', 'de'): 'Q37',
-                                ('Q37', 'o'): 'Q37',
-                                ('Q37', 'a'): 'Q37',
-                                ('Q37', 'um'): 'Q37',
-                                ('Q37', 'ser'): 'Q37',
-                                ('Q37', 'querer'): 'Q37',
-                                ('Q37', 'chegar'): 'Q37',
-                                ('Q37', 'encontrar'): 'Q37',
-                                ('Q37', 'motorista'): 'Q37',
-                                ('Q37', 'rota'): 'Q37',
-                                ('Q37', 'valor'): 'Q37',
-                                ('Q37', 'corrida'): 'Q37',
-                                ('Q37', 'carro'): 'Q37',
-                                ('Q37', 'placar'): 'Q37',
-                                ('Q37', 'forma'): 'Q37',
-                                ('Q37', 'pagamento'): 'Q37',
-                                ('Q37', 'destino'): 'Q37'
                                 } 
 
     def analisar_frase(self, entrada):
@@ -774,14 +754,43 @@ class Automato:
 
         if self.estado_atual in self.estados_finais:
             print("O autômato reconheceu a linguagem")
+            if self.estado_atual == 'Q3':
+                return print('INTENÇÃO: pedir corrida\nAção: Iniciar processo de corrida.') 
+            
+            elif self.estado_atual == 'Q7':
+                return print('INTENÇÃO: informação\nAção: Mostrar local de encontro no GPS.')
+
+            elif self.estado_atual == 'Q7' or self.estado_atual == 'Q9':
+                return print('INTENÇÃO: informação\nAção: Mostrar local de encontro no GPS.')
+            
+            elif self.estado_atual == 'Q13':
+                return print('INTENÇÃO: informação\nAção: Mostrar percurso no GPS.')
+            
+            elif self.estado_atual == 'Q14':
+                return print('INTENÇÃO: informação\nAção: Mostrar dados do motorista.')
+
+            elif self.estado_atual == 'Q16':
+                return print('INTENÇÃO: informação\nAção: Mostrar dados do carro do motorista.')
+            
+            elif self.estado_atual == 'Q17':
+                return print('INTENÇÃO: informação\nAção: Mostrar destino no GPS.')
+
+            elif self.estado_atual == 'Q21':
+                return print('INTENÇÃO: informação\nAção: Mostrar formas de pagamento.')
+
+            elif self.estado_atual == 'Q25':
+                return print('INTENÇÃO: informação\nAção: Mostrar preço da corrida.')
+        
+            elif self.estado_atual == 'Q31':
+                return print('INTENÇÃO: informação\nAção: Mostrar placa do carro.')
+            
+            elif self.estado_atual == 'Q35':
+                return print('INTENÇÃO: informação\nAção: Mostrar dados do motorista.')
+
+
         else:
             print("O autômato não reconheceu a linguagem")
         
-        if self.estado_atual == 'Q3':
-            return print('INTENÇÃO: Iniciar processo de corrida.') 
-        
-        elif self.estado_atual == 'Q7':
-            return print('INTENÇÃO: Mostrar local de encontro no GPS.')
 
 #automato = Automato()
 #automato.analisar_frase()
