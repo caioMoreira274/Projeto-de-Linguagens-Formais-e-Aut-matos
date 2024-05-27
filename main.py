@@ -38,6 +38,4 @@ print()
 # e os estados finais já serem as “intenções”
 
 print(f"Frase pelo autômato: ")
-print(automato.analisar_frase(frase_lematizada))
-
-
+automato.analisar_frase(frase_lematizada)

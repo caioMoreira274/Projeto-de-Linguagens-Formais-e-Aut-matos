@@ -66,4 +66,3 @@ def analisar_frase(frase_lematizada):
     except ValueError:
         print("A frase não é reconhecida pela gramática.")
 
-
