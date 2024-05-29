@@ -1692,7 +1692,7 @@ class Automato_Gramatica:
                                 ('Q87', 'v'): '.'
                                 }
 
-    def analisar_tokens_de_entrada(self, entrada: str):
+    def analisar_tokens_de_entrada_demonstrando(self, entrada: str):
         entrada = entrada.lower()
         palavras = entrada.split()
         palavras_invalidas = []
@@ -1741,4 +1741,42 @@ class Automato_Gramatica:
             if len(palavras) == 1:
                 print("A palavras pertence à gramática")
             else:      
-                print("Todas as palavras pertencem à gramática")  
+                print("Todas as palavras pertencem à gramática")
+                
+    def analisar_tokens_de_entrada(self, entrada: str):
+        entrada = entrada.lower()
+        palavras = entrada.split()
+        palavras_invalidas = []
+
+        for palavra in palavras:
+            self.estado_atual = self.estado_inicial  # Reinicia o estado para cada palavra
+            palavra_valida = True
+
+            for letra in palavra:
+                if letra not in self.alfabeto:
+                    palavra_valida = False
+                    break
+                else:
+                    self.estado_atual = self.funcao_transicao.get((self.estado_atual, letra), None)
+                    if self.estado_atual is None:
+                        palavra_valida = False
+                        break
+            
+            if not (palavra_valida and self.estado_atual in self.estados_finais):
+                palavras_invalidas.append(palavra)
+
+        if palavras_invalidas:
+            if len(palavras_invalidas) == 1:
+                print(f"A palavra '{palavras_invalidas[0]}' não pertence à gramática")
+            else:
+                palavras_str = ', '.join([f"'{p}'" for p in palavras_invalidas])
+                print(f"As palavras {palavras_str} não pertencem à gramática")
+        else:
+            if len(palavras) == 1:
+                print("A palavra pertence à gramática")
+            else:
+                print("Todas as palavras pertencem à gramática")
+
+automato = Automato_Gramatica()
+
+automato.analisar_tokens_de_entrada("qual fr de pagamento")
