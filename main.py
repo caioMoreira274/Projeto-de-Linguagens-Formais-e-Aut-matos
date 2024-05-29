@@ -1,8 +1,8 @@
 from lematizar import lematizacao
 from gramatica import analisar_frase
-from automato import Automato
+from automato_intencao import Automato_Intencao
 
-automato = Automato() 
+automato = Automato_Intencao() 
 
 frase = input("Digite uma frase: ")
 

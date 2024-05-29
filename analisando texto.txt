@@ -11,27 +11,8 @@ Onde encontrar o motorista?
 Quem é o motorista?
 Qual a placa do carro?
 Quais as formas de pagamento?
+
 ........................................
-FRASES LEMATIZADAS EM ORDEM ALFABETICA PARA FAZER O AUTOMATO
-exemplo a ser testado:
-
-S
-Q1                 -> quem qual quanto querer onde
-Q2       quem        -> ser
-Q3       qual        -> o ser a o tempo 
-Q4       quanto      -> tempo 
-Q5       quere       -> um
-Q6       onde        -> encontrar ser
-Q7       ser         -> o a 
-Q8       o           -> motorista valor carro forma destino
-Q9       a           -> rota placar 
-Q10      tempo       -> de o 
-x Q11    um          -> corrida
-Q12      encontrar   -> o 
-x Q13    motorista   -> chegar
-Q14      valor       -> de 
-
-
 
 quem ser o motorista
 qual ser a rota
