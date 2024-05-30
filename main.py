@@ -1,8 +1,10 @@
 from lematizar import lematizacao
 from gramatica import analisar_frase
+from automato_gramatica import Automato_Gramatica 
 from automato_intencao import Automato_Intencao
 
-automato = Automato_Intencao() 
+automato_intencao = Automato_Intencao()
+automato_gramatica = Automato_Gramatica()
 
 frase = input("Digite uma frase: ")
 
@@ -28,6 +30,7 @@ print()
 # com a gramática para verificar se formam uma frase válida de acordo com as regras gramaticais.
 
 print(f"Analisando a frase em relação à gramatica")
+automato_gramatica.analisar_tokens_de_entrada(frase_lematizada)
 analisar_frase(frase_lematizada)
 print()
 
@@ -38,4 +41,4 @@ print()
 # e os estados finais já serem as “intenções”
 
 print(f"Frase pelo autômato: ")
-automato.analisar_frase(frase_lematizada)
+automato_intencao.analisar_frase(frase_lematizada)

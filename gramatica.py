@@ -2,7 +2,7 @@ import nltk
 from nltk import CFG
 
 
-gramatica = CFG.fromstring("""
+producoes = """
         S -> Pron VP | Pron NP | NP VP | VP NP | 
         Pron -> "quem" | "qual" | "onde"
         NP -> Det Subs | Det Subs Prep NP | Det Subs Prep Subs | Prep Det Subs
@@ -11,50 +11,51 @@ gramatica = CFG.fromstring("""
         Det -> "o" | "a" | "um"
         Subs -> "motorista" | "rota" | "valor" | "corrida" | "carro" | "placar" | "forma" | "pagamento" | "destino" 
         Verb -> "ser" | "querer" | "chegar" | "encontrar"
-        """)
+        """
+gramatica = CFG.fromstring(producoes)
 
 parser = nltk.ChartParser(gramatica)
 
 frases = [
-"quem ser o motorista",
-"qual ser a rota",
-"qual ser o carro",
-"onde ser o destino",
-"onde encontrar o motorista",
-"qual o valor de o corrida",
-"qual o forma de pagamento",
-"qual a placar de o carro",
-"querer um corrida",
-]
+    "quem ser o motorista",
+    "qual ser a rota",
+    "qual ser o carro",
+    "onde ser o destino",
+    "onde encontrar o motorista",
+    "qual o valor de o corrida",
+    "qual o forma de pagamento",
+    "qual a placar de o carro",
+    "querer um corrida",
+    ]
 
 def analisar_frases_predefinidas():
     for frase in frases:
         sentenca = frase.split()
         print(f"Analisando a frase: '{frase}'")
-            
+                
         try:
             parsed = False
-                
+                    
             for arvore in parser.parse(sentenca):
                 print('Frase aceita')
                 arvore.pretty_print()
                 parsed = True
-                    
+                        
             if not parsed:
                 print("A frase não é reconhecida pela gramática.")
-                    
+                        
         except ValueError:
             print("A frase não é reconhecida pela gramática.")
-                
+                    
 def analisar_frase(frase_lematizada):
-        
+            
     sentenca = frase_lematizada.split()
-        
+            
     print(frase_lematizada)
-        
+            
     try:
         parsed = False
-            
+        print(f"analisando frase com autômato representado por:\n{gramatica}")
         for arvore in parser.parse(sentenca):
             arvore.pretty_print()
             print('Frase aceita')
@@ -62,7 +63,12 @@ def analisar_frase(frase_lematizada):
                 
         if not parsed:
             print("A frase não é reconhecida pela gramática.")
-                
+                    
     except ValueError:
         print("A frase não é reconhecida pela gramática.")
+    
+def imprimir_repr_gramatica(gramatica):
+    print(repr(gramatica))
 
+#analisar_frase("quem ser o motorista")
+#imprimir_repr_gramatica(gramatica)
