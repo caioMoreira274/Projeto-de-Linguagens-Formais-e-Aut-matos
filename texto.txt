@@ -1,6 +1,5 @@
 Quem é o motorista?
 Qual a rota?
-Quanto tempo até o destino?
 Qual o valor da corrida?
 Qual é o carro?
 Qual a placa do carro?
@@ -9,67 +8,3 @@ Qual é o modelo do carro?
 Quais as formas de pagamento?
 Quero uma corrida.
 Onde encontrar o motorista?
-
-
-chegar motorista o quanto tempo
-corrida de o o qual valor
-corrida querer um
-de forma o pagamento qual
-de o o placar qual carro
-de ser a qual rota
-de o ser onde destino
-encontrar motorista o onde
-motorista o quem ser
-o qual carro ser
-tempo de quanto viagem
-
-
-a
-chegar
-corrida
-de
-destino
-encontrar
-forma
-motorista
-o
-onde
-pagamento
-placar
-qual
-querer
-quem
-rota
-ser
-tempo
-um
-valor
-viagem
-
-
-
-
-[' ', 'a', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v']
-
-"o" - "n" - "d" - "e" - " " - "e" - "n" - "c" - "o" - "n" - "t" - "r" - "a" - "r" - " " - "o" - " " - "m" - "o" - "t" - "o" - "r" - "i" - "s" - "t" - "a"
-
-"o" - "n" - "d" - "e" - " " - "s" - "e" - "r" - " " - "o" - " " - "d" - "e" - "s" - "t" - "i" - "n" - "o"
-
-"q" - "u" - "a" - "l" - " " - "a" - " " - "p" - "l" - "a" - "c" - "a" - "r" - " " - "d" - "e" - " " - "o" - " " - "c" - "a" - "r" - "r" - "o"
-
-"q" - "u" - "a" - "l" - " " - "o" - " " - "f" - "o" - "r" - "m" - "a" - " " - "d" - "e" - " " - "p" - "a" - "g" - "a" - "m" - "e" - "n" - "t" - "o"
-
-"q" - "u" - "a" - "l" - " " - "o" - " " - "v" - "a" - "l" - "o" - "r" -  " " - "d" - "e" - " " - "o" - " " -"c" - "o" - "r" - "r" - "i" - "d" - "a"
-
-"q" - "u" - "a" - "l" - " " - "s" - "e" - "r" - " " - "a" - " " - "r" - "o" - "t" - "a"
-
-"q" - "u" - "a" - "l" - " " - "s" - "e" - "r" - " " - "o" - " " - "c" - "a" - "r" - "r" - "o"
-
-"q" - "u" - "a" - "n" - "t" - "o" - " " - "t" - "e" - "m" - "p" - "o" - " " - "d" - "e" - " " - "v" - "i" - "a" - "g" - "e" - "m"
-
-"q" - "u" - "a" - "n" - "t" - "o" - " " - "t" - "e" - "m" - "p" - "o" - " " - "o" - " " - "m" - "o" - "t" - "o" - "r" - "i" - "s" - "t" - "a" - " " - "c" - "h" - "e" - "g" - "a" - "r"
-
-"q" - "u" - "e" - "r" - "e" - "r" - " " - "u" - "m" - " " - "c" - "o" - "r" - "r" - "i" - "d" - "a"
-
-"q" - "u" - "e" - "m" - " " - "s" - "e" - "r" - " " - "o" - "m" - "o" - "t" - "o" - "r" - "i" - "s" - "t" - "a"
-
