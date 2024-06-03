@@ -26,7 +26,7 @@ print()
 print(f"A lista com os tokens: {lista_lematizada}")
 print()
 
-#Uma vez que os tokens tenham sido extraídos eles devem ser confrontados
+#   Uma vez que os tokens tenham sido extraídos eles devem ser confrontados
 # com a gramática para verificar se formam uma frase válida de acordo com as regras gramaticais.
 
 print(f"Analisando a frase em relação à gramatica")
@@ -34,7 +34,7 @@ automato_gramatica.analisar_tokens_de_entrada(frase_lematizada)
 analisar_frase(frase_lematizada)
 print()
 
-# Construa autômatos que representem intenções. 
+#   Construa autômatos que representem intenções. 
 #   Esses autômatos receberão como entrada os tokens
 # da frases gramaticalmente corretas. 
 # 'Uma outra possibilidade é já reconhecer as frases corretas

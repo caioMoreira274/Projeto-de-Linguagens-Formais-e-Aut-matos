@@ -1825,7 +1825,7 @@ class Automato_Gramatica:
         palavras_invalidas = []
 
         for palavra in palavras:
-            self.estado_atual = self.estado_inicial  # Reinicia o estado para cada palavra
+            self.estado_atual = self.estado_inicial
             palavra_valida = True
 
             for letra in palavra:
@@ -1857,4 +1857,4 @@ class Automato_Gramatica:
 
 automato = Automato_Gramatica()
 
-automato.analisar_tokens_de_entrada("qual fr de pagamento")
+#automato.analisar_tokens_de_entrada("qual fr de pagamento")
